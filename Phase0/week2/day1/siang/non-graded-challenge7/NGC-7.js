@@ -44,7 +44,7 @@ function konversiMenit(detik){
 function gacha(){
     // const rand = Math.floor((Math.random() * 5) + 1); 
     const rand = Math.ceil((Math.random() * 5));
-    console.log(rand)
+    // console.log(rand);
     switch (rand) {
         case 1:
             document.getElementById("msg").innerHTML = "coba lagi ya";
@@ -64,13 +64,15 @@ function gacha(){
     }
 }
 
-// bandingkanAngka(2, 3);
-// bandingkanAngka(3, 2);
-// bandingkanAngka(3, 3);
+bandingkanAngka(2, 3);
+bandingkanAngka(3, 2);
+bandingkanAngka(3, 3);
 
-// graduate("budi", 71, 5);
-// graduate("budi", 70, 5);
-// graduate("budi", 71, 4);
-// graduate("budi", 75, 7);
+graduate("budi", 71, 5);
+graduate("budi", 70, 5);
+graduate("budi", 71, 4);
+graduate("budi", 75, 7);
 
-konversiMenit(120);
+konversiMenit(88);
+konversiMenit(44);
+konversiMenit(61);
