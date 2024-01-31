@@ -3,16 +3,16 @@
 // ---------- Looping: I Love Coding ---------------
 // 1. Melakukan Looping Menggunakan for
 
-// let length = 20;
-// console.log("Looping for pertama");
-// for (let i = 1; i <= length; i++) {
-//     console.log(i + " = I love coding");
-// };
+let length = 20;
+console.log("Looping for pertama");
+for (let i = 1; i <= length; i++) {
+    console.log(i + " = I love coding");
+};
 
-// console.log("\nLooping for kedua");
-// for (let i = length; i >= 1; i--) {
-//     console.log(i + " = I will become fullstack developer");
-// };
+console.log("\nLooping for kedua");
+for (let i = length; i >= 1; i--) {
+    console.log(i + " = I will become fullstack developer");
+};
 
 // 2. While
 
