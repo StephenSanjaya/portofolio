@@ -92,81 +92,81 @@
 
 // --------- Array : Target Terdekat ---------
 
-// function targetTerdekat(arr){
-//     let left = 0;
-//     let right = 0;
-//     let flag = 0;
+function targetTerdekat(arr){
+    let left = 0;
+    let right = 0;
+    let flag = 0;
 
-//     //count left
-//     for (let i = 0; i < arr.length; i++) {
-//         if(arr[0] == 'o'){
-//             break;
-//         }
-//         if(arr[0] == ' '){ // x x o 
-//             continue;
-//         }
-//         if(arr[i] == 'x'){
-//             for (let j = i; j < arr.length; j++) {
-//                 if(arr[j+1] == ' '){
-//                     left++;
-//                     continue;
-//                 }else if(arr[j+1] == 'o'){
-//                     left++;
-//                     flag = 1;
-//                     break;
-//                 }else{
-//                     left = 0;
-//                     break;
-//                 }
-//             }
-//         }
-//         if(flag == 1){
-//             break;
-//         }
-//     };
+    //count left
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[0] == 'o'){
+            break;
+        }
+        if(arr[0] == ' '){ // x x o 
+            continue;
+        }
+        if(arr[i] == 'x'){
+            for (let j = i; j < arr.length; j++) {
+                if(arr[j+1] == ' '){
+                    left++;
+                    continue;
+                }else if(arr[j+1] == 'o'){
+                    left++;
+                    flag = 1;
+                    break;
+                }else{
+                    left = 0;
+                    break;
+                }
+            }
+        }
+        if(flag == 1){
+            break;
+        }
+    };
 
-//     flag = 0;
-//     //count right
-//     for (let i = arr.length-1; i > 0; i--) {
-//         if(arr[arr.length-1] == 'o'){
-//             break;
-//         }
-//         if(arr[arr.length-1] == ' '){ // x x o x x
-//             continue;
-//         }
-//         if(arr[i] == 'x'){
-//             for (let j = i; j >= 0; j--) {
-//                 // console.log(arr[j]);
-//                 if(arr[j-1] == ' '){
-//                     right++;
-//                     continue;
-//                 }else if(arr[j-1] == 'o'){
-//                     right++;
-//                     flag = 1;
-//                     break;
-//                 }else{
-//                     right = 0;
-//                     break;
-//                 }
-//             }
-//         }
-//         if(flag == 1){
-//             break;
-//         }
-//     }
+    flag = 0;
+    //count right
+    for (let i = arr.length-1; i > 0; i--) {
+        if(arr[arr.length-1] == 'o'){
+            break;
+        }
+        if(arr[arr.length-1] == ' '){ // x x o x x
+            continue;
+        }
+        if(arr[i] == 'x'){
+            for (let j = i; j >= 0; j--) {
+                // console.log(arr[j]);
+                if(arr[j-1] == ' '){
+                    right++;
+                    continue;
+                }else if(arr[j-1] == 'o'){
+                    right++;
+                    flag = 1;
+                    break;
+                }else{
+                    right = 0;
+                    break;
+                }
+            }
+        }
+        if(flag == 1){
+            break;
+        }
+    }
     
-//     if(left == 0 && right == 0){
-//         return 0;
-//     }else if(left == 0){
-//         return right;
-//     }else{
-//         return left;
-//     }
+    if(left == 0 && right == 0){
+        return 0;
+    }else if(left == 0){
+        return right;
+    }else{
+        return left;
+    }
 
-// }
-// console.log(targetTerdekat(['x', ' ', 'o', ' ', ' ', 'x']));
-// console.log(targetTerdekat([' ', ' ', 'o', ' ', ' ', 'x', ' ', 'x']));
-// console.log(targetTerdekat(['o', ' ', ' ', ' ', 'x', 'x', 'x']));
-// console.log(targetTerdekat(['x', ' ', ' ', ' ', 'x', 'x', 'o', ' ']));
-// console.log(targetTerdekat(['o', ' ', 'o', ' ']));
-// console.log(targetTerdekat([' ', 'o', ' ', 'x', 'x', ' ', ' ', 'x']));
+}
+console.log(targetTerdekat(['x', ' ', 'o', ' ', ' ', 'x']));
+console.log(targetTerdekat([' ', ' ', 'o', ' ', ' ', 'x', ' ', 'x']));
+console.log(targetTerdekat(['o', ' ', ' ', ' ', 'x', 'x', 'x']));
+console.log(targetTerdekat(['x', ' ', ' ', ' ', 'x', 'x', 'o', ' ']));
+console.log(targetTerdekat([' ', ' ', 'o', ' ']));
+console.log(targetTerdekat([' ', 'o', ' ', 'x', 'x', ' ', ' ', 'x']));
