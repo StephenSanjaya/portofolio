@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profil Saya</title>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="asset/css/style.css">
+    </head>
+    <body>
+        <nav>
+            <div class="menu-mobile">
+                <a href="#">Menu</a>
+            </div>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="#">PRODUCT</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">INVENTORY</a></li>
+            </ul>
+        </nav>
+
+        <section id="box-profile">
+            <div class="img-profile">
+                <div class="photo" style="background-image: url(./asset/image/download.jpeg)">
+                </div>
+            </div>
+            <div class="description">
+                <h1 id="pName">Nama Anda</h1>
+                <p id="pRole">Front End Designer</p>
+                <a href="#input_form" class="button bg-blue" onclick="editForm()">Edit</a>
+                <a href="#" class="button border-green">Resume</a>
+            </div>
+            <div class="information">
+                <div class="data">
+                    <p class="field">Availability</p>
+                    <p id="pAvailability" class="text-gray">Full Time</p>
+                </div>
+                <div class="data">
+                    <p class="field">Usia</p>
+                    <p id="pAge" class="text-gray">19</p>
+                </div>
+                <div class="data">
+                    <p class="field">Lokasi</p>
+                    <p id="pLocation" class="text-gray">Jakarta</p>
+                </div>
+                <div class="data">
+                    <p class="field">Pengalaman</p>
+                    <p id="pExp" class="text-gray">2 Tahun</p>
+                </div>
+                <div class="data">
+                    <p class="field">Email</p>
+                    <p id="pEmail" class="text-gray">email@gmail.com</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="input-form">
+            <form method="#" action="#">
+                <div class="form">
+                    <label>Nama</label>
+                    <input id="inpName" type="text" name="nama" placeholder="masukkan nama anda">
+                </div>   
+                <div class="form">
+                    <label>Role</label>
+                    <input id="inpRole" type="text" name="role">
+                </div>  
+                <div class="form">
+                    <label>Availability</label>
+                    <input id="inpAvailability" type="text" name="Availability">
+                </div>  
+                <div class="form">
+                    <label>Usia</label>
+                    <input id="inpAge" type="number" name="usia">
+                </div>  
+                <div class="form">
+                    <label>Lokasi</label>
+                    <input id="inpLocation" type="text" name="lokasi">
+                </div>  
+                <div class="form">
+                    <label>Years Experience</label>
+                    <input id="inpExp" type="number" name="pengalaman">
+                </div>  
+                <div class="form">
+                    <label>Email</label>
+                    <input id="inpEmail" type="email" name="email">
+                </div>            
+                <div class="form">
+                    <input onclick="" type="submit" name="submit" value="SUBMIT" class="bg-green">
+                </div>
+            </form>            
+        </section>
+
+        <script>
+            var formMenu = document.getElementById("input-form");
+            formMenu.style.display = "none";
+
+            function editForm(){
+                if(formMenu.style.display === "none"){
+                    formMenu.style.display = "block";
+                }else{
+                    formMenu.style.display = "none";
+                }
+            }
+
+            var name = document.getElementById("pName").innerHTML;
+            document.getElementById("inpName").value = name;
+
+            var role = document.getElementById("pRole").innerHTML;
+            document.getElementById("inpRole").value = role;
+
+            var avail = document.getElementById("pAvailability").innerHTML;
+            document.getElementById("inpAvailability").value = avail;
+
+            var age = document.getElementById("pAge").innerHTML;
+            document.getElementById("inpAge").value = age;
+
+            var loc = document.getElementById("pLocation").innerHTML;
+            document.getElementById("inpLocation").value = loc;
+
+            var exp = document.getElementById("pExp").innerHTML;
+            var validExp = exp.split(" ");
+            document.getElementById("inpExp").value = validExp[0];
+
+            var email = document.getElementById("pEmail").innerHTML;
+            document.getElementById("inpEmail").value = email;
+
+        </script>
+    </body>
+</html>
